@@ -1,5 +1,5 @@
 /**
- * ANA LUIZA BERALDO — INTERACTION & SMOOTH SCROLL SCRIPT
+ * EMEGÊ — INTERACTION & SMOOTH SCROLL SCRIPT
  * Lenis Smooth Scroll, Staggered Reveal Animations & Continuous Auto Carousel
  */
 

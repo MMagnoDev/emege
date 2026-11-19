@@ -1,26 +1,26 @@
 /* ==========================================================================
-   ANA LUIZA BERALDO — EDITORIAL LUXURY DESIGN SYSTEM
+   EMEGÊ — EDITORIAL LUXURY DESIGN SYSTEM
    High-contrast luxury serif + modern clean grotesque typography
    Warm linen tones, generous whitespace, refined cards and micro-interactions
    ========================================================================== */
 
 :root {
-  /* Color Palette — Personalizada discretamente com R240 G233 B229 e R116 G119 B98 */
-  --bg-page: #FAF8F6;
-  --bg-page-alt: #F0E9E5; /* R240 G233 B229 */
-  --bg-page-subtle: #F7F3F0;
+  /* Color Palette — Predominantemente branco com detalhes em R0 G9 B71 (#000947) */
+  --bg-page: #FFFFFF;
+  --bg-page-alt: #FAFAFA;
+  --bg-page-subtle: #F7F7F8;
   --bg-card: #FFFFFF;
-  --text-main: #231F1C;
-  --text-body: #47433E;
-  --text-muted: #7A746B;
-  --text-tag: #747762; /* R116 G119 B98 */
-  --border-line: #E3DDD5;
-  --border-subtle: #EDE7E1;
-  --border-dark: #231F1C;
-  --accent-gold: #747762; /* R116 G119 B98 */
-  --accent-sage: #747762; /* R116 G119 B98 */
-  --accent-linen: #F0E9E5; /* R240 G233 B229 */
-  --accent-warm: #9B9E87;
+  --text-main: #000947; /* R0 G9 B71 */
+  --text-body: #3A3A3A;
+  --text-muted: #6E6E6E;
+  --text-tag: #000947; /* R0 G9 B71 */
+  --border-line: #EAEAEA;
+  --border-subtle: #F0F0F0;
+  --border-dark: #000947;
+  --accent-gold: #000947; /* R0 G9 B71 */
+  --accent-sage: #000947; /* R0 G9 B71 */
+  --accent-linen: #F5F5F7;
+  --accent-warm: #1A266B;
   --accent-green-subtle: #25D366;
 
   /* Typography */
@@ -35,8 +35,8 @@
 
   /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --shadow-subtle: 0 4px 20px rgba(35, 31, 28, 0.04);
-  --shadow-hover: 0 14px 32px rgba(35, 31, 28, 0.08);
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 14px 32px rgba(0, 9, 71, 0.08);
 }
 
 /* Base Reset */
@@ -183,11 +183,11 @@ strong {
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-sage);
-  border-color: var(--accent-sage);
+  background-color: var(--accent-warm);
+  border-color: var(--accent-warm);
   color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(116, 119, 98, 0.28);
+  box-shadow: 0 8px 24px rgba(0, 9, 71, 0.25);
 }
 
 .btn-primary:hover svg {
@@ -213,6 +213,7 @@ strong {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
 }
 
@@ -227,7 +228,10 @@ strong {
 .section-hero {
   position: relative;
   width: 100%;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
+  overflow: hidden;
   padding: 0;
   margin: 0;
   background-color: var(--bg-page);
@@ -237,7 +241,9 @@ strong {
   display: grid;
   grid-template-columns: 52% 48%;
   width: 100%;
+  height: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
   margin: 0;
   padding: 0;
   align-items: stretch;
@@ -482,7 +488,7 @@ strong {
 
 .audience-card.featured-card {
   background: #FFFFFF;
-  border-color: rgba(116, 119, 98, 0.45);
+  border-color: rgba(0, 9, 71, 0.45);
 }
 
 .card-number {
@@ -528,7 +534,7 @@ strong {
   background: var(--bg-page-alt);
   padding: 0.4rem 0.85rem;
   border-radius: 20px;
-  border: 1px solid rgba(116, 119, 98, 0.25);
+  border: 1px solid rgba(0, 9, 71, 0.25);
 }
 
 /* ==========================================================================
@@ -562,12 +568,12 @@ strong {
 }
 
 .image-frame-approach .editorial-img {
-  opacity: 0.76;
+  opacity: 0.95;
   transition: opacity 0.6s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .image-frame-approach:hover .editorial-img {
-  opacity: 0.92;
+  opacity: 1;
   transform: scale(1.03);
 }
 
@@ -635,7 +641,7 @@ strong {
 .action-link-item:hover {
   transform: translateY(-3px);
   background-color: #FFFFFF;
-  border-color: rgba(116, 119, 98, 0.5);
+  border-color: rgba(0, 9, 71, 0.5);
   box-shadow: 0 12px 28px rgba(35, 31, 28, 0.07);
 }
 
@@ -739,8 +745,8 @@ strong {
 }
 
 .badge-modality-online {
-  background-color: rgba(116, 119, 98, 0.08);
-  border-color: rgba(116, 119, 98, 0.25);
+  background-color: rgba(0, 9, 71, 0.08);
+  border-color: rgba(0, 9, 71, 0.25);
   color: var(--accent-sage);
   font-weight: 600;
 }
@@ -827,6 +833,40 @@ strong {
   color: var(--text-body);
   margin-bottom: 1.5rem;
   flex-grow: 1;
+}
+
+.specialty-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.specialty-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.94rem;
+  line-height: 1.9;
+  color: var(--text-body);
+}
+
+.specialty-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+}
+
+.specialty-link {
+  color: var(--accent-sage);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.88rem;
+  transition: color 0.3s ease;
+}
+
+.specialty-link:hover {
+  color: var(--text-main);
 }
 
 .modality-target {
@@ -930,6 +970,12 @@ strong {
   padding-bottom: 2.75rem;
   border-top: 1px solid var(--border-line);
   background-color: var(--bg-page);
+}
+
+.footer-logo {
+  width: 72px;
+  height: auto;
+  display: block;
 }
 
 .footer-inner {
@@ -1109,12 +1155,18 @@ html.lenis body {
 
 @media (max-width: 992px) {
   .section-hero {
-    min-height: auto;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow: visible;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    min-height: auto;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
     gap: 0;
   }
 
